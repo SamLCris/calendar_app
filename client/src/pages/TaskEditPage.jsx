@@ -1,24 +1,17 @@
+import { updateTask } from "../api/task.api";
 import { useForm } from "react-hook-form";
-import { createTask } from "../api/task.api";
-import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export function TaskFormPage() {
+export function TaskEditPage() {
   const location = useLocation();
-  const newhash = new URLSearchParams(location.search).get("hash");
-
-  const { register, handleSubmit } = useForm();
-
+  const newid = new URLSearchParams(location.search).get("id");
   const navigate = useNavigate();
-
+  const { register, handleSubmit } = useForm();
   const onSubmit = handleSubmit(async (data) => {
-    data = { hash: newhash, ...data };
-    console.log(data);
-    await createTask(data);
+    await updateTask(newid, data);
     navigate("/tasks");
-    console.log(`the hash is ${newhash}`);
   });
-
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -34,12 +27,7 @@ export function TaskFormPage() {
           {...register("description", { required: true })}
           name="description"
         ></textarea>
-        <input
-          type="datetime-local"
-          placeholder="date"
-          {...register("date", { required: true })}
-        />
-        <button>Create Task</button>
+        <button>Edit Task</button>
       </form>
     </div>
   );
