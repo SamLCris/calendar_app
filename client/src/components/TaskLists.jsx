@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { getTasks } from "../api/task.api";
+import React from "react";
 import { TaskCard } from "./TaskCard";
 
-export function TaskLists() {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    async function loadTasks() {
-      const res = await getTasks();
-      console.log(res.data);
-      setTasks(res.data);
-    }
-    loadTasks();
-  }, []);
-
-  const removeTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id));
-  };
-
+export function TaskLists({ tasks = [], removeTask }) {
   return (
     <div>
+      <h1>List of tasks</h1>
       {tasks.map((task) => (
         <TaskCard key={task.id} task={task} onDelete={removeTask} />
       ))}

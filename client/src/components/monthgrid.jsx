@@ -1,7 +1,8 @@
 import React from "react";
+
 import { Daycard } from "./daycard";
 
-export function Month() {
+export function Month({ tasks, removeTask }) {
   const currentDate = new Date();
   const days = [];
 
@@ -10,6 +11,7 @@ export function Month() {
     day.setDate(currentDate.getDate() + i);
     days.push(day);
   }
+  console.log(`the first day param is ${days[1].getDay()}6am`);
 
   return (
     <div className="container justify-content-center ">
@@ -53,144 +55,536 @@ export function Month() {
       </div>
 
       <div className="row">
-        <div className="col-md-1">7:00</div>
-        <Daycard hashv={1} />
-        <Daycard hashv={2} />
-        <Daycard hashv={3} />
-        <Daycard hashv={4} />
-        <Daycard hashv={5} />
-        <Daycard hashv={6} />
-        <Daycard hashv={7} />
+        <div className="col-md-1">6:00am</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}6am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}6am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}6am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}6am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}6am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}6am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}6am`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">8:00</div>
-        <Daycard hashv={8} />
-        <Daycard hashv={9} />
-        <Daycard hashv={10} />
-        <Daycard hashv={11} />
-        <Daycard hashv={12} />
-        <Daycard hashv={13} />
-        <Daycard hashv={14} />
+        <div className="col-md-1 d-flex">7:00am</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}7am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}7am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}7am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}7am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}7am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}7am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}7am`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">9:00</div>
-        <Daycard hashv={15} />
-        <Daycard hashv={16} />
-        <Daycard hashv={17} />
-        <Daycard hashv={18} />
-        <Daycard hashv={19} />
-        <Daycard hashv={20} />
-        <Daycard hashv={21} />
+        <div className="col-md-1 d-flex">8:00am</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}8am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}8am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}8am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}8am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}8am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}9am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}8am`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">10:00</div>
-        <Daycard hashv={22} />
-        <Daycard hashv={23} />
-        <Daycard hashv={24} />
-        <Daycard hashv={25} />
-        <Daycard hashv={26} />
-        <Daycard hashv={27} />
-        <Daycard hashv={28} />
+        <div className="col-md-1 d-flex">9:00am</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}9am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}9am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}9am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}9am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}9am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}9am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}9am`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">8:00</div>
-        <Daycard hashv={29} />
-        <Daycard hashv={30} />
-        <Daycard hashv={31} />
-        <Daycard hashv={32} />
-        <Daycard hashv={33} />
-        <Daycard hashv={34} />
-        <Daycard hashv={35} />
+        <div className="col-md-1 d-flex">10:00am</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}10am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}10am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}10am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}10am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}10am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}10am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}10am`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">11:00</div>
-        <Daycard hashv={36} />
-        <Daycard hashv={37} />
-        <Daycard hashv={38} />
-        <Daycard hashv={39} />
-        <Daycard hashv={40} />
-        <Daycard hashv={41} />
-        <Daycard hashv={42} />
+        <div className="col-md-1 d-flex">11:00am</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}11am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}11am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}11am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}11am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}11am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}11am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}11am`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">12:00</div>
-        <Daycard hashv={43} />
-        <Daycard hashv={44} />
-        <Daycard hashv={45} />
-        <Daycard hashv={46} />
-        <Daycard hashv={47} />
-        <Daycard hashv={48} />
-        <Daycard hashv={49} />
+        <div className="col-md-1 d-flex">12:00am</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}12am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}12am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}12am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}12am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}12am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}12am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}12am`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">1:00</div>
-        <Daycard hashv={50} />
-        <Daycard hashv={51} />
-        <Daycard hashv={52} />
-        <Daycard hashv={53} />
-        <Daycard hashv={54} />
-        <Daycard hashv={55} />
-        <Daycard hashv={56} />
+        <div className="col-md-1 d-flex">1:00pm</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}13pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}13pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}13pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}13pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}13pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}13pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}13pm`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">2:00</div>
-        <Daycard hashv={57} />
-        <Daycard hashv={58} />
-        <Daycard hashv={59} />
-        <Daycard hashv={60} />
-        <Daycard hashv={61} />
-        <Daycard hashv={62} />
-        <Daycard hashv={63} />
+        <div className="col-md-1 d-flex">2:00pm</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}14pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}14pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}14pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}14pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}14pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}14pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}14pm`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">3:00</div>
-        <Daycard hashv={64} />
-        <Daycard hashv={65} />
-        <Daycard hashv={66} />
-        <Daycard hashv={67} />
-        <Daycard hashv={68} />
-        <Daycard hashv={69} />
-        <Daycard hashv={70} />
+        <div className="col-md-1 d-flex">3:00pm</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}15am`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}15pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}15pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}15pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}15pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}15pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}15pm`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">4:00</div>
-        <Daycard hashv={71} />
-        <Daycard hashv={72} />
-        <Daycard hashv={73} />
-        <Daycard hashv={74} />
-        <Daycard hashv={75} />
-        <Daycard hashv={76} />
-        <Daycard hashv={77} />
+        <div className="col-md-1 d-flex">4:00pm</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}16pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}16pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}16pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}16pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}16pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}16pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}16pm`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">5:00</div>
-        <Daycard hashv={78} />
-        <Daycard hashv={79} />
-        <Daycard hashv={80} />
-        <Daycard hashv={81} />
-        <Daycard hashv={82} />
-        <Daycard hashv={83} />
-        <Daycard hashv={84} />
+        <div className="col-md-1 d-flex">5:00pm</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}17pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}17pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}17pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}17pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}17pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}17pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}17pm`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">6:00</div>
-        <Daycard hashv={85} />
-        <Daycard hashv={86} />
-        <Daycard hashv={87} />
-        <Daycard hashv={88} />
-        <Daycard hashv={89} />
-        <Daycard hashv={90} />
-        <Daycard hashv={91} />
+        <div className="col-md-1 d-flex">6:00pm</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}18pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}18pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}18pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}18pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}18pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}18pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}18pm`}
+        />
       </div>
       <div className="row">
-        <div className="col-md-1 d-flex">7:00</div>
-        <Daycard hashv={92} />
-        <Daycard hashv={93} />
-        <Daycard hashv={94} />
-        <Daycard hashv={95} />
-        <Daycard hashv={96} />
-        <Daycard hashv={97} />
-        <Daycard hashv={98} />
+        <div className="col-md-1 d-flex">7:00pm</div>
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${new Date().getDay()}19pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[1].getDay()}19pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[2].getDay()}19pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[3].getDay()}19pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[4].getDay()}19pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[5].getDay()}19pm`}
+        />
+        <Daycard
+          tasks={tasks}
+          removeTask={removeTask}
+          hashv={`${days[6].getDay()}19pm`}
+        />
       </div>
     </div>
   );

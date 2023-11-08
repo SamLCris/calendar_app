@@ -6,7 +6,10 @@ export function Navigation() {
       <Link to="/tasks">
         <h1>Task App</h1>
       </Link>
-      <Link to="/tasks-create"> Create Tasks</Link>
+      <Link to="/tasks-create">
+        {" "}
+        <h2>Create a new task</h2>
+      </Link>
     </div>
   );
 }

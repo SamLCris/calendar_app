@@ -1,25 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-
-import { getTasks } from "../api/task.api";
 import { TaskCard } from "./TaskCard";
+import { useState } from "react";
 
-export function Daycard({ hashv }) {
+export function Daycard({ tasks = [], removeTask, hashv }) {
   let b = 0;
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    async function loadTasks() {
-      const res = await getTasks();
-      console.log(res.data);
-      setTasks(res.data);
-    }
-    loadTasks();
-  }, []);
-
-  const removeTask = (id) => {
-    setTasks(tasks.filter((task) => task.id !== id));
-  };
 
   const [hash, setHash] = useState(hashv);
   const navigate = useNavigate();
@@ -27,6 +12,8 @@ export function Daycard({ hashv }) {
     if (b === 0) {
       navigate(`/tasks-create?hash=${hash}`);
       console.log(`the hash is ${hash}`);
+      console.log(`the tasks in daycard are ${JSON.stringify(tasks)}`);
+      console.log(`the hashv is ${hashv}`);
     }
   };
 

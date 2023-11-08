@@ -18,10 +18,16 @@ export function TaskCard({ task, onDelete }) {
     <div>
       <h1>{task.title}</h1>
       <p>{task.description}</p>
-      <p>{task.date}</p>
-      <hr />
-      <button onClick={handleEdit}>edit Task</button>
-      <button onClick={() => handleDelete(task.id)}>Delete</button>
+      <button type="button" class="btn btn-primary" onClick={handleEdit}>
+        edit Task
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        onClick={() => handleDelete(task.id)}
+      >
+        Delete
+      </button>
     </div>
   );
 }
