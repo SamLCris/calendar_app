@@ -11,7 +11,7 @@ export function Month({ tasks, removeTask }) {
     day.setDate(currentDate.getDate() + i);
     days.push(day);
   }
-  console.log(`the first day param is ${days[1].getDay()}6am`);
+  console.log(`the first day param is ${days[0].getDay()}6am`);
 
   return (
     <div className="container justify-content-center ">

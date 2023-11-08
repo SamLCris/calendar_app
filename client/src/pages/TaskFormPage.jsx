@@ -66,13 +66,12 @@ export function TaskFormPage() {
           <div className="col-12">
             <input
               type="datetime-local"
-              defaultValue={new Date().toISOString().substr(0, 16)}
               {...register("date", { required: true })}
               name="date"
             />
           </div>
         )}
-        <button type="button" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Create Task
         </button>
       </form>
