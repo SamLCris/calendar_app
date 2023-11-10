@@ -89,14 +89,9 @@ WSGI_APPLICATION = 'calendar_app.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-<<<<<<< HEAD
+
         default='postgresql://postgres:postgres@localhost/postgres',
         conn_max_age=600)
-=======
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
-        conn_max_age=600
-    )
->>>>>>> e49a51eb7e0c00ff0aa5e089bff421d9764a1b9a
 }
 
 
