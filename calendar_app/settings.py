@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+import dj_database_url 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'coreapi',
     'tareas',
+
 ]
 
 MIDDLEWARE = [
@@ -60,6 +61,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
+
 
 ROOT_URLCONF = 'calendar_app.urls'
 
@@ -87,8 +89,14 @@ WSGI_APPLICATION = 'calendar_app.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
+<<<<<<< HEAD
         default='postgresql://postgres:postgres@localhost/postgres',
         conn_max_age=600)
+=======
+        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        conn_max_age=600
+    )
+>>>>>>> e49a51eb7e0c00ff0aa5e089bff421d9764a1b9a
 }
 
 
@@ -138,6 +146,7 @@ if not DEBUG:
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
